@@ -1,1 +1,17 @@
 @import "./reset";
+
+.card{
+    background-repeat: no-repeat;
+    width: 33%;
+}
+
+.reviews{
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    min-height: 1084px;
+    background-image: url('../images/bg-header.png');
+    color: #fff;
+}

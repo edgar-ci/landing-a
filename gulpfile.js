@@ -33,7 +33,7 @@ function watchAndServe() {
   });
 
   watch("src/styles/**/*.scss", styles);
-  watch("src/views/*.pug", html);
+  watch("src/views/**/*.pug", html);
   watch("src/assets/**/*", assets);
   watch("dist/*.html").on("change", browserSync.reload);
 }
