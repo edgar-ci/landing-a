@@ -1,0 +1,19 @@
+{
+  "name": "landing-a",
+  "version": "1.0.0",
+  "description": "page demo porfolio",
+  "main": "index.js",
+  "repository": "https://github.com/edgar-ci/landing-a",
+  "author": "https://github.com/edgar-ci",
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "gulp": "^4.0.2",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.58.0"
+  }
+}
