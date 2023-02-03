@@ -1,0 +1,105 @@
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+.header {
+  min-height: 1084px;
+  background-image: url("../images/bg-header.png");
+  color: #fff;
+  background-size: cover;
+  padding: 40px;
+
+  &--menu__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 478px;
+    width: 100%;
+
+    a {
+      display: inline-block;
+      font-family: sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    .cutlink {
+      position: relative;
+      white-space: nowrap;
+
+      &-inner {
+        clip-path: polygon(0 -20%, 100% -20%, 100% 51%, 0 51%);
+        -webkit-clip-path: polygon(0 -20%, 100% -20%, 100% 51%, 0 51%);
+        display: block;
+      }
+
+      &:before {
+        content: attr(data-content);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        clip-path: polygon(0 120%, 100% 120%, 100% 50%, 0 50%);
+        -webkit-clip-path: polygon(0 120%, 100% 120%, 100% 50%, 0 50%);
+      }
+
+      &-inner,
+      &:before {
+        transition: transform 0.2s $easeOutBack;
+      }
+
+      &:hover {
+        .cutlink-inner,
+        &:before {
+          transition: transform 1s $easeOutCirc;
+        }
+
+        &:before {
+          transform: translate(3px, 1px);
+        }
+
+        .cutlink-inner {
+          transform: translate(-3px, -1px);
+        }
+      }
+    }
+  }
+
+  &--wrapp {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+  }
+
+  &--cart {
+    height: 34px;
+    font-size: 32px;
+    position: relative;
+    right: 8px;
+  }
+
+  &--cart__count {
+    background-color: #e58411;
+    font-size: 16px;
+    width: 22px;
+    height: 28px;
+    display: flex;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    right: -8px;
+  }
+}
+
+.logo {
+  font-size: 28px;
+  line-height: 1;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-family: "Pacifico", cursive;
+}

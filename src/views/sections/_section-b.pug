@@ -1,62 +1,58 @@
-section 
+- var menu = ["chair","Beds","Sofa","Lamp"]
+section.section-b
   h2 Best Selling Product
-  nav 
+  nav.section-b__header
     ul 
-      li menu
-      li menu
-      li menu
-      li menu
-  div 
-    div
+    each item in menu
+      li #[button= item] 
+  div.section-b__wrapp
+    div.section-b__product
       img(src="./images/a1.png", alt="seller1")
       span Chair
       strong Title 1
       .stars
-        span.star 
-        span.star 
-        span.star 
-        span.star 
-        span.star 
+        - for (var x = 0; x < 5; x++)
+          i.fa-solid.fa-star
       .price 
         span $ 350
       button.add
-    div
+        i.fa-solid.fa-plus
+
+    div.section-b__product
       img(src="./images/a2.png", alt="seller2")
       span Chair
       strong Title 2
       .stars
-        span.star 
-        span.star 
-        span.star 
-        span.star 
-        span.star 
+        - for (var x = 0; x < 5; x++)
+          i.fa-solid.fa-star
       .price 
         span $ 350
       button.add
-    div
+        i.fa-solid.fa-plus
+
+    div.section-b__product
       img(src="./images/a3.png", alt="seller3")
       span Chair
       strong Title 3
       .stars
-        span.star 
-        span.star 
-        span.star 
-        span.star 
-        span.star 
+        - for (var x = 0; x < 5; x++)
+          i.fa-solid.fa-star
       .price 
         span $ 350
       button.add
+        i.fa-solid.fa-plus
+
     div
       img(src="./images/a4.png", alt="seller4")
       span Chair
       strong Title 4
       .stars
-        span.star 
-        span.star 
-        span.star 
-        span.star 
-        span.star 
+        - for (var x = 0; x < 5; x++)
+          i.fa-solid.fa-star
       .price 
         span $ 350
       button.add
+        i.fa-solid.fa-plus
+
   button Show All
+    i.fa-sharp.fa-solid.fa-arrow-right-long

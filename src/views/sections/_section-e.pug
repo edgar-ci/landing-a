@@ -1,47 +1,41 @@
-section
+section.section-e
+  .section-e__wrapper
     div
-        h6 Testimonials
-        strong Our Client Reviews
+      h6 Testimonials
+      strong Our Client Reviews
     .reviews
-        .card(style="background-image:url('images/card-1.png')")
-            div
-                span
-                    img(src="images/profile-1.png", alt="profile")
-                div
-                    strong Name Profile
-                    span subtext info
-                    p “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
-                    .stars
-                        span.star 
-                        span.star 
-                        span.star 
-                        span.star 
-                        span.star 
-        .card(style="background-image:url('images/card-2.png')")
-            div
-                span
-                    img(src="images/profile-2.png", alt="profile")
-                div
-                    strong Name Profile
-                    span subtext info
-                    p “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
-                    .stars
-                        span.star 
-                        span.star 
-                        span.star 
-                        span.star 
-                        span.star 
-        .card(style="background-image:url('images/card-3.png')")
-            div
-                span
-                    img(src="images/profile-3.png", alt="profile")
-                div
-                    strong Name Profile
-                    span subtext info
-                    p “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
-                    .stars
-                        span.star 
-                        span.star 
-                        span.star 
-                        span.star 
-                            span.star 
+      .card(style="background-image:url('images/card-1.png')")
+        div
+          span
+            img(src="images/profile-1.png", alt="profile")
+          div
+            strong Name Profile
+            span subtext info
+            p “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
+            .stars
+              - for (var x = 0; x < 5; x++)
+                  i.fa-solid.fa-star
+
+      .card(style="background-image:url('images/card-2.png')")
+        div
+          span
+            img(src="images/profile-2.png", alt="profile")
+          div
+            strong Name Profile
+            span subtext info
+            p “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
+            .stars
+              - for (var x = 0; x < 5; x++)
+                i.fa-solid.fa-star
+
+      .card(style="background-image:url('images/card-3.png')")
+          div
+            span
+              img(src="images/profile-3.png", alt="profile")
+              div
+                strong Name Profile
+                span subtext info
+                p “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
+                .stars
+                  - for (var x = 0; x < 5; x++)
+                    i.fa-solid.fa-star

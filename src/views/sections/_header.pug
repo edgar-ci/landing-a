@@ -1,15 +1,21 @@
-header
-  nav
-    h1 Panto 
-    ul 
-        li Furniture
-        li Shop 
-        li About 
-        li Contact 
-    section
+- var menu = ["Furniture","Shop","About","Contact"]
+
+header.header
+  .wrapper
+    nav.header--wrapp
+      h1.logo Panto 
+      .header--menu__top
+        each item in menu
+          a(class="cutlink" data-content=item) #[span.cutlink-inner=item]
+      span.header--cart
+        i.fa-solid.fa-bag-shopping
+        em.header--cart__count 0
+
+    section.wrapper
       h2 Make Your Interior More Minimalistic & Modern
       h3 Turn your room with panto into a lot more minimalist and modern with ease and speed
       div
           form 
           input(type="text", name="" placeholder="Search furniture")
           button(type="submit") 
+            i.fa-sharp.fa-solid.fa-magnifying-glass
