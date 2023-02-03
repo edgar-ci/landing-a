@@ -1,0 +1,75 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+}
+
+.card{
+    background-repeat: no-repeat;
+    width: 33%;
+}
+
+.reviews{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.section-b {
+    &__header {
+        display: flex;
+        justify-content: center;
+        ul,li{
+            list-style: none;
+        }
+    }
+    &__wrapp {
+        justify-content: space-between;
+        display: flex;
+    }
+
+    &__product{
+        width: 25%;
+    }
+}
+
+.section-c {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.section-d {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.section-e{
+    .reviews{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .card{
+        min-height: 500px;
+    }
+}
+
+.footer {
+    background-color: #F7F7F7;
+}
+
+.wrapper {
+    max-width: 1280px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
