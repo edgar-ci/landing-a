@@ -1,6 +1,9 @@
 .section-c {
     position: relative;
     padding: 120px 0;
+    max-width: 1440px;
+    display: block;
+    margin: 0 auto;
 
     &__wrapper{
         display: flex;

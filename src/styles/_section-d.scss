@@ -3,6 +3,10 @@
     padding: 120px 0 180px;
     width: 100%;
     overflow: hidden;
+    max-width: 1440px;
+    display: block;
+    margin: 0 auto;
+
     &__wrapper{
         display: flex;
         justify-content: flex-start;
@@ -11,7 +15,6 @@
     
     .content {
         width: 50%;
-        margin-left: 140px;
         max-width: 556px;
         margin-top: 14px;
 
@@ -112,9 +115,9 @@
         justify-content: flex-end;
         flex-direction: column;
         height: 630px;
-        width: 440px;
+        width: 420px;
         padding-bottom: 24px;
-
+        margin-right: 5px;
         .wrap-img{
             position: relative;
             img{
@@ -124,6 +127,7 @@
             .main{
                 bottom: 20px;
                 left: 0;
+                width: 100%;
             }
 
             .blur{
@@ -132,7 +136,7 @@
                 filter: blur(10px);
                 z-index: -2;
                 opacity: 0.6;
-                width: calc(100% + 10px);
+                width: 100%;
                 left: -5px;
             }
         }
