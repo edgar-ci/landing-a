@@ -1,0 +1,140 @@
+.section-d {
+    position: relative;
+    padding: 120px 0 180px;
+    width: 100%;
+    overflow: hidden;
+    &__wrapper{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    .content {
+        width: 50%;
+        margin-left: 140px;
+        max-width: 556px;
+        margin-top: 14px;
+
+        span {
+            color: #E58411;
+            margin-bottom: 20px;
+        }
+
+        h6 {
+            text-transform: capitalize;
+            max-width: 450px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            max-width: 520px;
+        }
+    }
+
+    .btn-info {
+        margin-top: 24px;
+        font-weight: 400;
+        font-size: 12px;
+        &::after{
+            top: 7px;
+        }
+        &::before{
+            top: 4px;
+        }
+    }
+
+    .wrap-img {
+        img {
+            border-radius: 20px;
+        }
+    }
+
+    .cols-img{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .col-img-1{
+        margin-right: 42px;
+        width: 222px;
+        height: 600px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        .wrap-img {
+            width: 100%;
+            height: auto;
+            position: relative;
+            img{
+                display: block;
+            }
+            &:first-child{
+                .main{
+                    top: 0;
+                }
+                .blur {
+                    top: 20px;
+                    width: calc(100% + 3px) !important;
+                }
+            }
+            &:last-child {
+                height: 200px;
+                width: 100%;
+                .main{
+                    bottom: 10px;
+                }
+                .blur {
+                    bottom: -8px;
+                }
+            }
+        }
+        .wrap-img {
+            img{
+                position: absolute;
+                left: 0;
+                &.blur{
+                    filter: blur(10px);
+                    z-index: -2;
+                    opacity: 0.6;
+                    width: calc(100% + 8px);
+                }
+            }
+        }
+    }
+    .col-img-2{
+        position: relative;
+        height: 600px;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        height: 630px;
+        width: 440px;
+        padding-bottom: 24px;
+
+        .wrap-img{
+            position: relative;
+            img{
+                position: absolute;
+                display: block;
+            }
+            .main{
+                bottom: 20px;
+                left: 0;
+            }
+
+            .blur{
+                z-index: -1;
+                bottom: 10px;
+                filter: blur(10px);
+                z-index: -2;
+                opacity: 0.6;
+                width: calc(100% + 10px);
+                left: -5px;
+            }
+        }
+    }
+}

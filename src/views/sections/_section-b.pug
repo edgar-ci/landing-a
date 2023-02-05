@@ -1,58 +1,31 @@
-- var menu = ["chair","Beds","Sofa","Lamp"]
+- var menu = ["Beds","Sofa","Lamp"]
+- var prods = ["Sakarias Armchair", "Baltsar Chair", "Baltsar Chair", "Nyantuy Chair",]  
+- var n = (v) => Math.round((400 + v)*Math.random() + 120);
+
 section.section-b
-  h2 Best Selling Product
-  nav.section-b__header
-    ul 
-    each item in menu
-      li #[button= item] 
-  div.section-b__wrapp
-    div.section-b__product
-      img(src="./images/a1.png", alt="seller1")
-      span Chair
-      strong Title 1
-      .stars
-        - for (var x = 0; x < 5; x++)
-          i.fa-solid.fa-star
-      .price 
-        span $ 350
-      button.add
-        i.fa-solid.fa-plus
-
-    div.section-b__product
-      img(src="./images/a2.png", alt="seller2")
-      span Chair
-      strong Title 2
-      .stars
-        - for (var x = 0; x < 5; x++)
-          i.fa-solid.fa-star
-      .price 
-        span $ 350
-      button.add
-        i.fa-solid.fa-plus
-
-    div.section-b__product
-      img(src="./images/a3.png", alt="seller3")
-      span Chair
-      strong Title 3
-      .stars
-        - for (var x = 0; x < 5; x++)
-          i.fa-solid.fa-star
-      .price 
-        span $ 350
-      button.add
-        i.fa-solid.fa-plus
-
-    div
-      img(src="./images/a4.png", alt="seller4")
-      span Chair
-      strong Title 4
-      .stars
-        - for (var x = 0; x < 5; x++)
-          i.fa-solid.fa-star
-      .price 
-        span $ 350
-      button.add
-        i.fa-solid.fa-plus
-
-  button Show All
-    i.fa-sharp.fa-solid.fa-arrow-right-long
+  .wrapper
+    h2.title Best Selling Product
+    nav.section-b__header
+      ul
+          li #[button.section-b__header--item.active Chair] 
+          each item in menu
+            li #[button.section-b__header--item= item] 
+    .section-b__wrapp
+      each prod, index in prods
+        div.section-b__product
+          .img-rs
+            img(src="./images/a"+(index+1)+".png", alt="seller1")
+          .content
+            em Chair
+            p=prod
+            .stars
+              - for (var x = 0; x < 5; x++)
+                i.fa-solid.fa-star
+            .footer
+              .price 
+                span $
+                strong #{n(index + 1)}
+              button.btn-add
+                i.fa-solid.fa-circle-plus
+    .section-b__footer
+      a(href="#").btn-info View All

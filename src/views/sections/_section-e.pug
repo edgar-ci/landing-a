@@ -1,41 +1,48 @@
 section.section-e
-  .section-e__wrapper
-    div
-      h6 Testimonials
-      strong Our Client Reviews
+  .wrapper
+    .content
+      span.span-text Testimonials
+      h6.h6 Our Client Reviews
     .reviews
       .card(style="background-image:url('images/card-1.png')")
-        div
-          span
-            img(src="images/profile-1.png", alt="profile")
-          div
-            strong Name Profile
-            span subtext info
+        .blur-bg(style="background-image:url('images/card-1.png')")
+        .card__body
+          .profile-img
+            img(src="images/profile-1.png", alt="profile").main
+            img(src="images/profile-1.png", alt="profile").blur
+          .description
+            strong.name Name Profile
+            span.info subtext info
             p “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
-            .stars
-              - for (var x = 0; x < 5; x++)
-                  i.fa-solid.fa-star
-
-      .card(style="background-image:url('images/card-2.png')")
-        div
-          span
-            img(src="images/profile-2.png", alt="profile")
-          div
-            strong Name Profile
-            span subtext info
-            p “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
-            .stars
-              - for (var x = 0; x < 5; x++)
+          .stars
+            - for (var x = 0; x < 5; x++)
                 i.fa-solid.fa-star
 
+      .card(style="background-image:url('images/card-2.png')")
+        .blur-bg(style="background-image:url('images/card-2.png')")
+        .card__body
+          .profile-img
+            img(src="images/profile-2.png", alt="profile").main
+            img(src="images/profile-2.png", alt="profile").blur
+          .description
+            strong.name Name Profile
+            span.info subtext info
+            p “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
+          .stars
+            - for (var x = 0; x < 5; x++)
+              i.fa-solid.fa-star
+
       .card(style="background-image:url('images/card-3.png')")
-          div
-            span
-              img(src="images/profile-3.png", alt="profile")
-              div
-                strong Name Profile
-                span subtext info
-                p “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
-                .stars
-                  - for (var x = 0; x < 5; x++)
-                    i.fa-solid.fa-star
+        .blur-bg(style="background-image:url('images/card-3.png')")
+        .card__body
+          .profile-img
+            img(src="images/profile-3.png", alt="profile").main
+            img(src="images/profile-3.png", alt="profile").blur
+          .description
+            strong.name Name Profile
+            span.info subtext info
+            p “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
+          .stars
+            - for (var x = 0; x < 4; x++)
+              i.fa-solid.fa-star
+            i.fa-solid.fa-star.disabled

@@ -1,7 +1,9 @@
 .section-a {
-    margin: 120px auto;
-    display: flex;
-    justify-content: space-between;
+    .wrapper {
+        margin: 120px auto;
+        display: flex;
+        justify-content: space-between;
+    }
     .title{
         align-self: center;
         max-width: 268px;
