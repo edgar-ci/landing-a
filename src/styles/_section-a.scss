@@ -3,6 +3,13 @@
         margin: 120px auto;
         display: flex;
         justify-content: space-between;
+        @include devices(lg) {
+            flex-wrap: wrap;
+        }
+       
+        @include devices(md) {
+            
+        }
     }
     .title{
         align-self: center;
@@ -10,12 +17,32 @@
         font-size: 42px;
         line-height: 1.4;
         font-weight: 600;
+        @include devices(lg) {
+            margin-bottom: 32px;
+        }
     }
+
     &__content{
         display: flex;
         max-width: 904px;
+        justify-content: space-between;
+        width: 100%;
+        @include devices(sm) {
+            flex-wrap: wrap;
+        }
     }
+    
     &__item{
+        @include devices(md) {
+            max-width: 210px;
+        }
+        
+        @include devices(sm) {
+            max-width: 320px;
+            width: 100%;
+            margin-bottom: 32px;
+        }
+
         &--title{
             font-weight: 500;
             font-size: 24px;
