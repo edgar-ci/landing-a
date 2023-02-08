@@ -6,10 +6,6 @@
         @include devices(lg) {
             flex-wrap: wrap;
         }
-       
-        @include devices(md) {
-            
-        }
     }
     .title{
         align-self: center;
