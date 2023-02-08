@@ -1,20 +1,27 @@
-- var menu = ["Furniture","Shop","About","Contact"]
+- var menu = ["Home","Page","About","Contact"]
 
 header.header
   .wrapper
     nav.header--wrapp
-      h1.logo Panto 
-      .header--menu__top
+      #nav-wrapp
+        #nav-icon
+          span 
+          span 
+          span 
+          span 
+      h1.logo Landing 
+      .header--menu__top#menu-responsive
+        h1.logo-rs Landing 
         each item in menu
           a(class="cutlink" data-content=item) #[span.cutlink-inner=item]
       span.header--cart
         i.fa-solid.fa-bag-shopping
         em.header--cart__count 0
     section.wrapper.header--badge
-      h2.title Make Your Interior More Minimalistic & Modern
-      h3.subtitle Turn your room with panto into a lot more minimalist and modern with ease and speed
+      h2.title Catch eat throw catch eat throw up bad birds.
+      h3.subtitle You have cat to be kitten me right meow purr like a car engine oh yes.
       div.search
         form
-          input(type="text", name="" placeholder="Search furniture").search--input
+          input(type="text", name="" placeholder="Search").search--input
           button(type="submit").search--button
             i.fa-sharp.fa-solid.fa-magnifying-glass
