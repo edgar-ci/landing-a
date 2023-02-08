@@ -14,6 +14,14 @@
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-column-gap: 38px;
+        @include devices(sm) {
+            grid-template-columns: repeat(2,1fr);
+            grid-column-gap: 16px;
+            grid-row-gap: 16px;
+        }
+        @include devices(xs) {
+            grid-template-columns: repeat(1,1fr);
+        }
     }
 
     .card {
@@ -25,6 +33,15 @@
         min-height: 500px;
         width: 100%;
         border-radius: 20px;
+        @include devices(sm) {
+            min-height: 100px;
+            width: auto;
+        }
+        &:last-child{
+            @include devices(sm) {
+                display: none;
+            }
+        }
         &__body{
             width: 100%;
             background-color: #fff;
@@ -35,6 +52,14 @@
             flex-wrap: wrap;
             position: relative;
             box-shadow: 0 1px 3px 0px rgba(51,51,51,0.2);
+            @include devices(sm) {
+                align-self: center;
+                margin-top: 42px;
+                background-color: rgba(#fff, 0.97);
+            }
+            @include devices(xs) {
+                width: 100%;
+            }
         }
         .blur-bg{
             position: absolute;
@@ -87,6 +112,7 @@
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 12px;
+        
     }
     .info {
         color: #1E1E1E;
@@ -97,6 +123,9 @@
         display: inline-block;
         margin-bottom: 32px;
         opacity: 0.6;
+        @include devices(xs) {
+            margin-bottom:16px ;
+        }
     }
     
     .description{
@@ -108,6 +137,9 @@
             opacity: 0.8;
             display: inline-block;
             margin-bottom: 40px;
+            @include devices(xs) {
+                margin-bottom:24px ;
+            }
         }
     }
 

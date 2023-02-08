@@ -6,6 +6,9 @@
         @include devices(lg) {
             flex-wrap: wrap;
         }
+        @include devices(xs) {
+            margin: 32px 0;
+        }
     }
     .title{
         align-self: center;
@@ -34,7 +37,7 @@
         }
         
         @include devices(sm) {
-            max-width: 320px;
+            max-width: 405px;
             width: 100%;
             margin-bottom: 32px;
         }
