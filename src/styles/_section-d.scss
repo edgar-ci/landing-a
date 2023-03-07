@@ -1,183 +1,180 @@
 .section-d {
-    position: relative;
-    padding: 120px 0 180px;
-    width: 100%;
-    overflow: hidden;
-    max-width: 1440px;
-    display: block;
-    margin: 0 auto;
+  position: relative;
+  padding: 120px 0 180px;
+  width: 100%;
+  overflow: hidden;
+  max-width: 1440px;
+  display: block;
+  margin: 0 auto;
 
-    &__wrapper{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;        
-        @include devices(sm){
-            align-items: flex-start;
-        }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include devices(sm) {
+      align-items: flex-start;
     }
-    
-    &__content {
-        width: 50%;
-        max-width: 556px;
-        margin-top: 14px;
-        @include devices(lg) {
-           padding: 0 15px; 
-        }  
-        @include devices(md){
-            padding-bottom: 45px;
-        }
-        
-        @include devices(sm){
-            width: 100%;
-        }
+  }
 
-        span {
-            color: #E58411;
-            margin-bottom: 20px;
-        }
-
-        h6 {
-            text-transform: capitalize;
-            max-width: 450px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            max-width: 520px;
-        }
+  &__content {
+    width: 50%;
+    max-width: 556px;
+    margin-top: 14px;
+    @include devices(lg) {
+      padding: 0 15px;
+    }
+    @include devices(md) {
+      padding-bottom: 45px;
     }
 
-    .btn-info {
-        margin-top: 24px;
-        font-weight: 400;
-        font-size: 12px;
-        &::after{
-            top: 7px;
-        }
-        &::before{
-            top: 4px;
-        }
+    @include devices(sm) {
+      width: 100%;
+    }
+
+    span {
+      color: #e58411;
+      margin-bottom: 20px;
+    }
+
+    h6 {
+      text-transform: capitalize;
+      max-width: 450px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 520px;
+    }
+  }
+
+  .btn-info {
+    margin-top: 24px;
+    font-weight: 400;
+    font-size: 12px;
+    &::after {
+      top: 7px;
+    }
+    &::before {
+      top: 4px;
+    }
+  }
+
+  .wrap-img {
+    img {
+      border-radius: 20px;
+    }
+  }
+
+  .cols-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include devices(sm) {
+      flex-direction: column;
+      display: none;
+    }
+  }
+
+  .col-img-1 {
+    margin-right: 42px;
+    width: 222px;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include devices(md) {
+      height: 400px;
+      width: 150px;
+      margin-right: 15px;
     }
 
     .wrap-img {
-        img {
-            border-radius: 20px;
-        }
-    }
-
-    .cols-img{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        @include devices(sm){
-            flex-direction: column;
-            display: none;
-        }
-        
-    }
-
-    .col-img-1{
-        margin-right: 42px;
-        width: 222px;
-        height: 600px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        @include devices(md){
-            height: 400px;
+      width: 100%;
+      height: auto;
+      position: relative;
+      img {
+        display: block;
+      }
+      &:first-child {
+        .main {
+          top: 0;
+          @include devices(md) {
             width: 150px;
-            margin-right: 15px;
+          }
         }
+        .blur {
+          top: 20px;
+          width: calc(100% + 3px) !important;
+          @include devices(md) {
+            width: 150px;
+          }
+        }
+      }
+      &:last-child {
+        width: 100%;
 
-        .wrap-img {
-            width: 100%;
-            height: auto;
-            position: relative;
-            img{
-                display: block;
-            }
-            &:first-child{
-                .main{
-                    top: 0;
-                    @include devices(md){
-                        width: 150px;
-                    }    
-                }
-                .blur {
-                    top: 20px;
-                    width: calc(100% + 3px) !important;
-                    @include devices(md){
-                        width: 150px;
-                    }    
-                }
-            }
-            &:last-child {
-                width: 100%;
-              
-                .main{
-                    bottom: 10px;
-                    @include devices(md){
-                        width: 150px;
-                    } 
-                      
-                }
-                .blur {
-                    bottom: -8px;
-                    @include devices(md){
-                        width: 150px;
-                        bottom: 0px;
-                    }     
-                }
-            }
+        .main {
+          bottom: 10px;
+          @include devices(md) {
+            width: 150px;
+          }
         }
-        .wrap-img {
-            img{
-                position: absolute;
-                left: 0;
-                &.blur{
-                    filter: blur(10px);
-                    z-index: -2;
-                    opacity: 0.6;
-                    width: calc(100% + 8px);
-                    
-                }
-            }
+        .blur {
+          bottom: -8px;
+          @include devices(md) {
+            width: 150px;
+            bottom: 0px;
+          }
         }
+      }
     }
-    .col-img-2{
-        position: relative;
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: column;
-        height: 630px;
-        width: 420px;
-        padding-bottom: 24px;
-        margin-right: 5px;
-        @include devices(md) {
-           width: 300px;         
-           height: 400px;
-        }  
-        .wrap-img{
-            position: relative;
-            img{
-                position: absolute;
-                display: block;
-            }
-            .main{
-                bottom: 20px;
-                left: 0;
-                width: 100%;
-            }
+    .wrap-img {
+      img {
+        position: absolute;
+        left: 0;
+        &.blur {
+          filter: blur(10px);
+          z-index: -2;
+          opacity: 0.6;
+          width: calc(100% + 8px);
+        }
+      }
+    }
+  }
+  .col-img-2 {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 630px;
+    width: 420px;
+    padding-bottom: 24px;
+    margin-right: 5px;
+    @include devices(md) {
+      width: 300px;
+      height: 400px;
+    }
+    .wrap-img {
+      position: relative;
+      img {
+        position: absolute;
+        display: block;
+      }
+      .main {
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+      }
 
-            .blur{
-                z-index: -1;
-                bottom: 10px;
-                filter: blur(10px);
-                z-index: -2;
-                opacity: 0.6;
-                width: 100%;
-                left: -5px;
-            }
-        }
+      .blur {
+        z-index: -1;
+        bottom: 10px;
+        filter: blur(10px);
+        z-index: -2;
+        opacity: 0.6;
+        width: 100%;
+        left: -5px;
+      }
     }
+  }
 }
